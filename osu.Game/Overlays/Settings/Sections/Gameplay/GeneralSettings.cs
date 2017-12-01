@@ -20,7 +20,8 @@ namespace osu.Game.Overlays.Settings.Sections.Gameplay
                 {
                     LabelText = "Background dim",
                     Bindable = config.GetBindable<double>(OsuSetting.DimLevel),
-                    KeyboardStep = 0.1f
+                    NormalKeyboardStep = 0.1f,
+                    SmallKeyboardStep = 0.01f
                 },
                 new SettingsCheckbox
                 {

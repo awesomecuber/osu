@@ -24,14 +24,16 @@ namespace osu.Game.Overlays.Settings
             RelativeSizeAxes = Axes.X
         };
 
-        public float KeyboardStep;
+        public float NormalKeyboardStep;
+        public float SmallKeyboardStep;
 
         [BackgroundDependencyLoader]
         private void load()
         {
             var slider = Control as U;
             if (slider != null)
-                slider.KeyboardStep = KeyboardStep;
+                slider.NormalKeyboardStep = NormalKeyboardStep;
+                slider.SmallKeyboardStep = SmallKeyboardStep;
         }
     }
 }

@@ -9,6 +9,8 @@ using osu.Game.Rulesets.Configuration;
 using osu.Game.Rulesets.Difficulty;
 using osu.Game.Rulesets.Edit;
 using osu.Game.Rulesets.Mods;
+using osu.Game.Rulesets.Nico.Beatmaps;
+using osu.Game.Rulesets.Nico.Difficulty;
 using osu.Game.Rulesets.Replays.Types;
 using osu.Game.Rulesets.UI;
 using osu.Game.Scoring;
@@ -17,33 +19,19 @@ namespace osu.Game.Rulesets.Nico
 {
     public class NicoRuleset : Ruleset
     {
+        public NicoRuleset(RulesetInfo rulesetInfo = null) : base(rulesetInfo)
+        {
+        }
+
         public override string Description => "osu!nico";
         public override string ShortName => "nico";
 
-        public override IBeatmapConverter CreateBeatmapConverter(IBeatmap beatmap)
-        {
-            throw new System.NotImplementedException();
-        }
+        public override IBeatmapConverter CreateBeatmapConverter(IBeatmap beatmap) => new NicoBeatmapConverter(beatmap);
 
-        public override IBeatmapProcessor CreateBeatmapProcessor(IBeatmap beatmap)
-        {
-            return base.CreateBeatmapProcessor(beatmap);
-        }
+        // add configs later (laser color, scroll speed/type)
+        public override IRulesetConfigManager CreateConfig(SettingsStore settings) => base.CreateConfig(settings);
 
-        public override IRulesetConfigManager CreateConfig(SettingsStore settings)
-        {
-            return base.CreateConfig(settings);
-        }
-
-        public override IConvertibleReplayFrame CreateConvertibleReplayFrame()
-        {
-            return base.CreateConvertibleReplayFrame();
-        }
-
-        public override DifficultyCalculator CreateDifficultyCalculator(WorkingBeatmap beatmap)
-        {
-            throw new System.NotImplementedException();
-        }
+        public override DifficultyCalculator CreateDifficultyCalculator(WorkingBeatmap beatmap) => new NicoDifficultyCalculator(this, beatmap);
 
         public override DrawableRuleset CreateDrawableRulesetWith(WorkingBeatmap beatmap, IReadOnlyList<Mod> mods)
         {

@@ -8,8 +8,10 @@ using System.Text;
 
 namespace osu.Game.Rulesets.Nico.Object
 {
-    class NicoHitObject : HitObject
+    public class NicoHitObject : HitObject
     {
+        public override double StartTime { get => base.StartTime; set => base.StartTime = value; }
 
+        protected override HitWindows CreateHitWindows() => new NicoHitWindows();
     }
 }

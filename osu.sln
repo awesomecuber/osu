@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "osu.Game.Rulesets.Taiko", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "osu.Game.Rulesets.Mania", "osu.Game.Rulesets.Mania\osu.Game.Rulesets.Mania.csproj", "{48F4582B-7687-4621-9CBE-5C24197CB536}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "osu.Game.Rulesets.Nico", "osu.Game.Rulesets.Nico\osu.Game.Rulesets.Nico.csproj", "{48F4582B-7687-4621-9CBE-5C24197CB536}"
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "osu.Game.Tests", "osu.Game.Tests\osu.Game.Tests.csproj", "{54377672-20B1-40AF-8087-5CF73BF3953A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "osu.Desktop", "osu.Desktop\osu.Desktop.csproj", "{419659FD-72EA-4678-9EB8-B22A746CED70}"

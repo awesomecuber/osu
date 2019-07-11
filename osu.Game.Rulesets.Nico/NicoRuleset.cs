@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using osu.Framework.Graphics;
 using osu.Framework.Input.Bindings;
 using osu.Game.Beatmaps;
-using osu.Game.Beatmaps.Legacy;
 using osu.Game.Configuration;
 using osu.Game.Overlays.Settings;
 using osu.Game.Rulesets.Configuration;
@@ -11,7 +10,6 @@ using osu.Game.Rulesets.Edit;
 using osu.Game.Rulesets.Mods;
 using osu.Game.Rulesets.Nico.Beatmaps;
 using osu.Game.Rulesets.Nico.Difficulty;
-using osu.Game.Rulesets.Replays.Types;
 using osu.Game.Rulesets.UI;
 using osu.Game.Scoring;
 

@@ -20,7 +20,7 @@ namespace osu.Game.Rulesets.Nico.Difficulty
         }
 
         protected override DifficultyAttributes CreateDifficultyAttributes(IBeatmap beatmap, Mod[] mods, Skill[] skills, double clockRate) => new NicoDifficultyAttributes();
-
+        
         protected override IEnumerable<DifficultyHitObject> CreateDifficultyHitObjects(IBeatmap beatmap, double clockRate)
         {
             for (int i = 1; i < beatmap.HitObjects.Count; i++)
